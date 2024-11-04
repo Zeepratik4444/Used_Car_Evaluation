@@ -6,8 +6,8 @@ import pandas as pd
 from xgboost import XGBRegressor
 model =XGBRegressor()
 model.load_model(r'xgb_model.json') 
-encoders= pickle.load(open(r'D:\Naik\GitHUB Repo\Used_Car_Evaluation\used_car_evauluation_encoders.pkl', "rb"))
-scaler= pickle.load(open(r'D:\Naik\GitHUB Repo\Used_Car_Evaluation\used_car_evauluation_scaler.pkl', "rb"))
+encoders= pickle.load(open(r'used_car_evauluation_encoders.pkl', "rb"))
+scaler= pickle.load(open(r'used_car_evauluation_scaler.pkl', "rb"))
 
 
 
