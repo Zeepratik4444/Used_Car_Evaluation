@@ -59,7 +59,9 @@ def predict_price(data, encoders,scaler, model): # Add '_' before encoders
 if submit_button:
     if all(value is not None for value in data.values()):
         predicted_price=predict_price(data,encoders,scaler,model)
-        st.success(f"The estimated price of your vehicle is : ₹. {predicted_price[0].round()}" ) 
+        if predicted_price<0:
+            st.write('Invalid Input! Please Enter your vehicle details')
+        else:
+            st.success(f"The estimated price of your vehicle is : ₹. {predicted_price[0].round()}" ) 
     else:
         st.write("Please enter all the details")
-
