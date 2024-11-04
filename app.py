@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-import torch
 import pickle
 import pandas as pd
 from xgboost import XGBRegressor
